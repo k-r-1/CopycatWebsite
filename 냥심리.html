@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats and Dogs</title>
+    <link rel="stylesheet" href="style2.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Yusei+Magic&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    $(".hover").mouseleave(
+    function () {
+      $(this).removeClass("hover");
+    }
+  );
+</script>
+    
+    <style type="text/css">
+
+        ul.tabs {
+            margin: 0;
+            padding: 0 0 0 320px;
+            float: left;
+            list-style: none;
+            height: 32px;
+            /* border-bottom: 1px solid #999;
+            border-left: 1px solid #999; */
+            width: 100%;
+        }
+        ul.tabs li {
+            
+            float: left;
+            margin: 0;
+            padding: 0;
+            height: 31px;
+            line-height: 31px;
+            /* border: 1px solid #999; */
+            border-left: none;
+            margin-bottom: -1px;
+            background: #F0F0F0;
+            overflow: hidden;
+            position: relative;
+        }
+        ul.tabs li a {
+            text-decoration: none;
+            color: #000;
+            display: block;
+            font-size: 1.2em;
+            padding: 0 20px;
+            /* border: 1px solid #fff; */
+            outline: none;
+        }
+        ul.tabs li a:hover {
+            /* background: #ccc; */
+        }	
+        html ul.tabs li.active, html ul.tabs li.active a:hover  {
+            background: #fff;
+            border-bottom: 1px solid #fff;
+        }
+        .tab_container {
+            /* border: 1px solid #999; */
+            border-top: none;
+            clear: both;
+            float: left; 
+            width: 100%;
+            /* background: #fff; */
+            -moz-border-radius-bottomright: 5px;
+            -khtml-border-radius-bottomright: 5px;
+            -webkit-border-bottom-right-radius: 5px;
+            -moz-border-radius-bottomleft: 5px;
+            -khtml-border-radius-bottomleft: 5px;
+            -webkit-border-bottom-left-radius: 5px;
+        }
+        .tab_content {
+            padding: 20px;
+            font-size: 1.2em;
+        }
+        .tab_content h2 {
+            font-weight: normal;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #ddd;
+            font-size: 1.8em;
+            padding-top: 50px;
+            padding-bottom: 20px;
+            padding-left: 30px;
+            font-size: 20px;
+            line-height: 1.325em;
+            font-weight: 700;
+            /* text-shadow: 0.05em 0.075em 0 rgb(0 0 0 / 10%); */
+            letter-spacing: 13px;
+            text-transform: uppercase;
+            text-decoration: none;
+
+        }
+        .tab_content h3 a{
+            color: #254588;
+        }
+        .tab_content img {
+            float: left;
+            margin: 0 20px 20px 0;
+            border: 1px solid #ddd;
+            padding: 5px;
+        }
+
+.que:first-child{
+    border-top: 1px solid black;
+  }
+  
+.que{
+  position: relative;
+  padding: 60px 0;
+  cursor: pointer;
+  font-size: 20px;
+  border-bottom: 1px solid #dddddd;
+  
+}
+  
+.que::before{
+  display: inline-block;
+  content: 'Q';
+  font-size: 17px;
+  color: #006633;
+  margin-right: 5px;
+}
+
+.que.on>span{
+  font-weight: bold;
+  color: #006633; 
+}
+  
+.anw {
+  display: none;
+  overflow: hidden;
+  font-size: 16px;
+  background-color: #f4f4f2;
+  padding: 27px 0;
+}
+  
+.anw::before {
+  display: inline-block;
+  content: 'A';
+  font-size: 14px;
+  font-weight: bold;
+  color: #666;
+  margin-right: 5px;
+}
+
+ h2 {
+            font-weight: normal;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #ddd;
+            font-size: 1.8em;
+            padding-top: 50px;
+            padding-bottom: 20px;
+            padding-left: 30px;
+            font-size: 20px;
+            line-height: 1.325em;
+            font-weight: 700;
+            /* text-shadow: 0.05em 0.075em 0 rgb(0 0 0 / 10%); */
+            letter-spacing: 13px;
+            text-transform: uppercase;
+            text-decoration: none;
+
+        }
+        </style>
+        
+</head>
+<body>
+    <div id="slide_bg"></div>
+     <div id="slide_menu">
+            <ul class="m_nav">
+               <a href="#" id="close_btn"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z"/></svg></a>
+                <li class="m_nav_title" id="m1"><a href="#">냥정보</a>
+                    <ul class="m_nav_sub">
+                        <li><a href="냥건강.html">건강</a></li>
+                        <li><a href="냥심리.html">심리</a></li>
+                        <li><a href="냥교육.html">교육방법</a></li>
+                    </ul>
+                </li>
+                <li class="m_nav_title" id="m2"><a href="#">멍정보</a>
+                     <ul class="m_nav_sub">
+                        <li><a href="멍건강.html">건강</a></li>
+                        <li><a href="멍심리.html">심리</a></li>
+                        <li><a href="멍교육.html">교육방법</a></li>
+                    </ul>
+                </li>
+                <!-- <li class="m_nav_title" id="m3"><a href="#">Tip</a>
+                     <ul class="m_nav_sub">
+                        <li><a href="#">Sub3-1</a></li>
+                        <li><a href="#">Sub3-2</a></li>
+                        <li><a href="#">Sub3-3</a></li>
+                        <li><a href="#">Sub3-4</a></li>
+                    </ul>
+                </li> -->
+                <li class="m_nav_title" id="m4"><a href="main.html">Home</a>
+                     <!-- <ul class="m_nav_sub">
+                        <li><a href="#">Sub4-1</a></li>
+                        <li><a href="#">Sub4-2</a></li>
+                        <li><a href="#">Sub4-3</a></li>
+                        <li><a href="#">Sub4-4</a></li>
+                    </ul> -->
+                </li>
+            </ul>
+     </div>
+    <div id="wrap">
+       
+        <header id="header">
+            <ul class="nav_mian">
+                <li class="nav_title"><a href="#">냥정보</a>
+                    <ul class="nav_sub">
+                        <li><a href="냥건강.html">건강</a></li>
+                        <li><a href="냥심리.html">심리</a></li>
+                        <li><a href="냥교육.html">교육방법</a></li>
+                    </ul>
+                </li>
+                <li class="nav_title"><a href="#">멍정보</a>
+                     <ul class="nav_sub">
+                        <li><a href="멍건강.html">건강</a></li>
+                        <li><a href="멍심리.html">심리</a></li>
+                        <li><a href="멍교육.html">교육방법</a></li>
+                    </ul>
+                </li>
+                <!-- <li class="nav_title"><a href="#">Tip</a>
+                     <ul class="nav_sub">
+                        <li><a href="#">사료 구입</a></li>
+                        <li><a href="#">미용</a></li>
+                        <li><a href="#">Sub3-3</a></li>
+                        <li><a href="#">Sub3-4</a></li>
+                    </ul>
+                </li> -->
+                <li class="nav_title"><a href="main.html">Home</a>
+                     <!-- <ul class="nav_sub">
+                        <li><a href="#">Sub4-1</a></li>
+                        <li><a href="#">Sub4-2</a></li>
+                        <li><a href="#">Sub4-3</a></li>
+                        <li><a href="#">Sub4-4</a></li>
+                    </ul> -->
+                </li>
+            </ul>
+            <a id="title" href="main.html">Cats and Dogs</a>
+            <div id="burgerbtn"><img style="wdith: 100%; height: 100%;" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yNCAxOHYxaC0yNHYtMWgyNHptMC02djFoLTI0di0xaDI0em0wLTZ2MWgtMjR2LTFoMjR6IiBmaWxsPSIjMTA0MGUyIi8+PHBhdGggZD0iTTI0IDE5aC0yNHYtMWgyNHYxem0wLTZoLTI0di0xaDI0djF6bTAtNmgtMjR2LTFoMjR2MXoiLz48L3N2Zz4="></div>
+        </header>
+
+        <div id="content">
+            <h2 style="padding-top: 50px; padding-left: 30px; padding-bottom: 10px;">고양이 심리</h2>
+
+<div id="Accordion_wrap">
+     <div class="que">
+      <span>흥분, 긴장 상태일 때</span>
+     </div>
+     <div class="anw">
+      <span><br><strong><mark>털이 곤두서 있다</strong></mark><br><br>
+       - 고양이가 불안, 두려움, 긴장 상태이거나 흥분 상태에서 허리부터 꼬리까지의 털이 곤두선다. 마치 정전기가 일어난 듯 털이 부풀어 올라 마치 밤송이처럼 보인다.<br><br>
+        <strong><mark>귀가 뒤로 젖혀진다</strong></mark><br><br>
+        - 일명 마징가 귀라고도 불리는 모습이다. 고양이가 화가 나 흥분 상태이거나 공포를 느낄 때 귀가 뒤로 젖혀진다. 이때 고양이를 불필요하게 자극하지 않도록 주의하자.<br><br>
+        <strong><mark>꼬리가 부풀어 오른다</strong></mark><br><br>
+        - 고양이가 갑자기 꼬리가 펑 부풀어 오른다면 흥분과 공격태세를 의미한다. 하지만 아직 어린 아기 고양이라면 놀라거나 사냥 놀이를 하다가 보일 수 있다.<br>공격 보다 두려움이나 공포가 강할 때에는 부풀어 오른 꼬리를 뒷다리 사이에 끼우듯 아래로 내린다.<br><br>
+        <strong><mark>이를 보이며 하악질을 한다</strong></mark><br><br>
+        - 고양이가 하악질을 한다면 상대에 대한 공격을 의미하기 때문에 즉시 거리를 두는 것이 좋다.<br>
+        고양이는 두려움이나 위협을 느껴 두려움을 느낄 때에도 하악질을 하곤 하니 더 다가가지 않고 안정될 때까지 기다려주자.</span>
+     </div>
+      <div class="que">
+      <span>두려움, 슬픈 상태일 때</span>
+     </div>
+     <div class="anw">
+        <span><br><strong><mark>몸을 웅크린다</strong></mark><br><br>
+            - 고양이가 두렵거나 슬플 때에는 둥글게 몸을 말고 웅크린 자세를 취한다. 천둥 소리와 같은 갑자기 큰 소리가 나거나, 싸움에서 졌을 때 등 두려움으로 인한 긴장상태로 움직임이 줄어든다.<br><br>
+             <strong><mark>귀를 아래로</strong></mark><br><br>
+             - 고양이가 귀를 아래로 눕히며 전체적으로 자세가 낮아 졌다면 슬픔이나 두려움을 의미한다. 이 때에는 큰 동작이나 소리를 내는 것을 자제하도록 하자.
+            </span>
+     </div>
+      <div class="que">
+      <span>애교를 부리고 싶을 때</span>
+     </div>
+     <div class="anw">
+        <span><br><strong><mark>골골송</strong></mark><br><br>
+            - 고양이가 그릉그릉 하는 진동 소리를 내고 있을 때에는 대부분 응석을 부리고 싶거나, 휴식을 취할 때다. 스스로를 안정시키는 카밍시그널 중의 하나다.<br><br>
+             <strong><mark>몸을 비빈다</strong></mark><br><br>
+             - 고양이가 집사의 발이나 다리, 얼굴에 몸을 비빌 때에는 응석을 부리고 싶을 때다. 이 행동은 원하는 것이 있거나, 배가 고플 때, 쓰다듬어 달라는 표현일 수 있다.<br>고양이의 얼굴과 엉덩이에는 냄새선이 있는데 이를 집사에게 묻히며 세력권과 영역 표시를 하는 의미이기도 하다.
+            </span>
+     </div>
+     <div class="que">
+        <span>불안할 때</span>
+       </div>
+       <div class="anw">
+        <span><br><strong><mark>큰 소리로 운다</strong></mark><br><br>
+            - 고양이는 기본적으로 잘 울지 않지만 갑자기 큰 소리로 운다면 뭔가 요구 사항이나 불만이 있을 때다. 만약 분리 불안이 있는 고양이일 경우 집사가 집을 비우면 큰 소리로 울며 집 안을 돌아다니기도 한다.<br><br>
+             <strong><mark>소변 테러</strong></mark><br><br>
+             - 고양이가 화장실이 아닌 다른 곳에서 소변을 눈다면 스트레스를 받고 있거나 불안한 상태라는 것을 의미한다.<br>지속적으로 소변을 여기저기 눈다면 질병이 원인일 수도 있으니 고양이의 상태를 점검해보도록 하자.
+            </span>
+     
+</div>
+<script>
+    $(".que").click(function() {
+   $(this).next(".anw").stop().slideToggle(300);
+  $(this).toggleClass('on').siblings().removeClass('on');
+  $(this).next(".anw").siblings(".anw").slideUp(300); // 1개씩 펼치기
+});
+</script>
+      <script src="script.js"></script>
+</body>
+</html>

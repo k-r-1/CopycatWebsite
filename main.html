@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats and Dogs</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Yusei+Magic&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+	<script>
+		$(function(){
+  var $slider = $('.slider'),
+      $firstSlide = $slider.find('li').first() // 첫번째 슬라이드
+      .stop(true).animate({'opacity':1},200); // 첫번째 슬라이드만 보이게 하기
+
+  function PrevSlide(){ // 이전버튼 함수
+    stopSlide();startSlide(); //타이머 초기화
+    var $lastSlide = $slider.find('li').last() //마지막 슬라이드
+    .prependTo($slider); //마지막 슬라이드를 맨 앞으로 보내기  
+    $secondSlide = $slider.find('li').eq(1)//두 번째 슬라이드 구하기
+    .stop(true).animate({'opacity':0},400); //밀려난 두 번째 슬라이드는 fadeOut 시키고
+    $firstSlide = $slider.find('li').first() //맨 처음 슬라이드 다시 구하기
+    .stop(true).animate({'opacity':1},400);//새로 들어온 첫 번째 슬라이드는 fadeIn 시키기
+  }
+  
+  function NextSlide(){ // 다음 버튼 함수
+    stopSlide();startSlide(); //타이머 초기화
+    $firstSlide = $slider.find('li').first() // 첫 번째 슬라이드
+    .appendTo($slider); // 맨 마지막으로 보내기
+    var $lastSlide = $slider.find('li').last() // 맨 마지막으로 보낸 슬라이드
+    .stop(true).animate({'opacity':0},400); // fadeOut시키기
+    $firstSlide = $slider.find('li').first()// 맨 처음 슬라이드
+    .stop(true).animate({'opacity':1},400);// fadeIn 시키기
+  }
+  
+  $('#next').on('click', function(){ //다음버튼 클릭
+    NextSlide();
+  });
+  $('#prev').on('click', function(){ //이전 버튼 클릭
+    PrevSlide();
+  });
+
+  startSlide(); // 자동 슬라이드 시작
+  
+  var theInterval;
+
+  function startSlide() {
+    theInterval = setInterval(NextSlide, 5000); //자동 슬라이드 설정
+  }
+
+  function stopSlide() { //자동 멈추기
+    clearInterval(theInterval);
+  }
+  
+  $('.slider').hover(function(){ //마우스 오버시 슬라이드 멈춤
+    stopSlide();
+  }, function (){
+    startSlide();
+  });
+});
+	</script>
+</head>
+<body>
+    <div id="slide_bg"></div>
+     <div id="slide_menu">
+            <ul class="m_nav">
+               <a href="#" id="close_btn"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z"/></svg></a>
+                <li class="m_nav_title" id="m1"><a href="#">냥정보</a>
+                    <ul class="m_nav_sub">
+                        <li><a href="냥건강.html">건강</a></li>
+                        <li><a href="냥심리.html">심리</a></li>
+                        <li><a href="냥교육.html">교육방법</a></li>
+                    </ul>
+                </li>
+                <li class="m_nav_title" id="m2"><a href="#">멍정보</a>
+                     <ul class="m_nav_sub">
+                        <li><a href="멍건강.html">건강</a></li>
+                        <li><a href="멍심리.html">심리</a></li>
+                        <li><a href="멍교육.html">교육방법</a></li>
+                    </ul>
+                </li>
+                <!-- <li class="m_nav_title" id="m3"><a href="#">Tip</a>
+                     <ul class="m_nav_sub">
+                        <li><a href="#">Sub3-1</a></li>
+                        <li><a href="#">Sub3-2</a></li>
+                        <li><a href="#">Sub3-3</a></li>
+                        <li><a href="#">Sub3-4</a></li>
+                    </ul>
+                </li> -->
+                <li class="m_nav_title" id="m4"><a href="main.html">Home</a>
+                     <!-- <ul class="m_nav_sub">
+                        <li><a href="#">Sub4-1</a></li>
+                        <li><a href="#">Sub4-2</a></li>
+                        <li><a href="#">Sub4-3</a></li>
+                        <li><a href="#">Sub4-4</a></li>
+                    </ul> -->
+                </li>
+            </ul>
+     </div>
+    <div id="wrap">
+       
+        <header id="header">
+            <ul class="nav_mian">
+                <li class="nav_title"><a href="#">냥정보</a>
+                    <ul class="nav_sub">
+                        <li><a href="냥건강.html">건강</a></li>
+                        <li><a href="냥심리.html">심리</a></li>
+                        <li><a href="냥교육.html">교육방법</a></li>
+                    </ul>
+                </li>
+                <li class="nav_title"><a href="#">멍정보</a>
+                     <ul class="nav_sub">
+                        <li><a href="멍건강.html">건강</a></li>
+                        <li><a href="멍심리.html">심리</a></li>
+                        <li><a href="멍교육.html">교육방법</a></li>
+                    </ul>
+                </li>
+                <!-- <li class="nav_title"><a href="#">Tip</a>
+                     <ul class="nav_sub">
+                        <li><a href="#">사료 구입</a></li>
+                        <li><a href="#">미용</a></li>
+                        <li><a href="#">Sub3-3</a></li>
+                        <li><a href="#">Sub3-4</a></li>
+                    </ul>
+                </li> -->
+                <li class="nav_title"><a href="main.html">Home</a>
+                     <!-- <ul class="nav_sub">
+                        <li><a href="#">Sub4-1</a></li>
+                        <li><a href="#">Sub4-2</a></li>
+                        <li><a href="#">Sub4-3</a></li>
+                        <li><a href="#">Sub4-4</a></li>
+                    </ul> -->
+                </li>
+            </ul>
+            <a id="title" href="main.html">Cats and Dogs</a>
+            <div id="burgerbtn"><img style="wdith: 100%; height: 100%;" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yNCAxOHYxaC0yNHYtMWgyNHptMC02djFoLTI0di0xaDI0em0wLTZ2MWgtMjR2LTFoMjR6IiBmaWxsPSIjMTA0MGUyIi8+PHBhdGggZD0iTTI0IDE5aC0yNHYtMWgyNHYxem0wLTZoLTI0di0xaDI0djF6bTAtNmgtMjR2LTFoMjR2MXoiLz48L3N2Zz4="></div>
+        </header>
+		
+        <div id="content">
+			<!-- Logo -->
+			<h1 id="logo"><a href="main.html">Cats and Dogs</a></h1>
+
+			<ul id="cardOver">
+				<li>
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkMFd7NiMR8_lwa6XMRKCmYyFFuX0bH6kvoVWwxN-g5RwYSFpPCNwr_xXgn-Euhr8S6pQ&usqp=CAU" width="200" height="330" alt="card1">
+				  <div class="bg"></div>
+				  <div class="view">
+					<h3>Cats</h3>
+					<p>Search for "cat" on Google. Press the bottom button to move</p>
+					<a href="https://www.google.com/search?q=%EA%B3%A0%EC%96%91%EC%9D%B4&sxsrf=AOaemvKj2-WuFw-fAvej8cDIRhe3SuXU2g%3A1638121076678&ei=dL6jYa33KNapoASm44WgCQ&ved=0ahUKEwitgf_GzLv0AhXWFIgKHaZxAZQQ4dUDCA4&uact=5&oq=%EA%B3%A0%EC%96%91%EC%9D%B4&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECcyBAgjECcyBAgjECcyBwguELEDEEMyBAgAEEMyBwguELEDEEMyCAgAEIAEELEDMgQILhBDMggIABCABBCxAzIICAAQgAQQsQM6CwgAEIAEELEDEIMBOg4ILhCABBCxAxDHARCjAjoICC4QgAQQsQNKBAhBGABQAFiGBWDKBmgBcAJ4AYABgwGIAdsGkgEDMC43mAEAoAEBwAEB&sclient=gws-wiz">VIEW</a>
+				  </div>
+				</li>
+				<li>
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ00Vt1pIcNAVn8NpjH42HSGf7ZEVjUMi9svg&usqp=CAU" width="200" height="330" alt="card1">
+					<div class="bg"></div>
+				  <div class="view">
+					<h3>and</h3>
+					<p>Welcome! "Cats&Dogs" is a site for cats and dogs</p>
+					<a href="#">❤</a>
+				  </div>
+				</li>
+				<li>
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2XHG9c0syiOIYAD9LYNVG3A3k6r3Zv3Hi2A&usqp=CAU" width="200" height="330" alt="card1">
+					<div class="bg"></div>
+				  <div class="view">
+					<h3>Dogs</h3>
+					<p>Search for "Dog" on Google. Press the bottom button to move</p>
+					<a href="https://www.google.com/search?q=%EA%B0%95%EC%95%84%EC%A7%80&sxsrf=AOaemvKmPU6B1t3eygY-H5iJus5_GmtY9Q%3A1638121168776&ei=0L6jYdnYLpPr-Qaa7aXABg&ved=0ahUKEwjZgPTyzLv0AhWTdd4KHZp2CWgQ4dUDCA4&uact=5&oq=%EA%B0%95%EC%95%84%EC%A7%80&gs_lcp=Cgdnd3Mtd2l6EAMyBwgAEEcQsAMyBwgAEEcQsAMyBwgAEEcQsAMyBwgAEEcQsAMyBwgAEEcQsAMyBwgAEEcQsAMyBwgAEEcQsAMyBwgAEEcQsANKBAhBGABQAFgAYJMJaAFwAngAgAEAiAEAkgEAmAEAyAEIwAEB&sclient=gws-wiz">VIEW</a>
+				  </div>
+				</li>
+				<li>
+					<img src="https://downloadwap.com/thumbs2/wallpapers/p2/2019/animals/44/04e4ca0e13389931.jpg" width="200" height="330" alt="card1">
+					<div class="bg"></div>
+				  <div class="view">
+					<h3>❤</h3>
+					<p>Welcome! "Cats&Dogs" is a site for cats and dogs</p>
+					<a href="#">❤</a>
+				  </div>
+				</li>
+			</ul>
+			<section>
+				<ul class="slider">
+				  <li>
+					<div style="background-image:url('http://www.v3wall.com/wallpaper/1920_1080/1004/1920_1080_20100418125207369683.jpg')">
+					  <dl class="right">
+						<!-- <dt></dt>
+						<dd></dd> -->
+					  </dl>
+					</div>
+				  </li>
+				  <li>
+					<div style="background-image:url('https://p4.wallpaperbetter.com/wallpaper/879/797/135/puppy-dog-background-wallpaper-preview.jpg');">
+					  <dl>
+						<!-- <dt></dt>
+						<dd></dd> -->
+					  </dl>
+					</div>
+				  </li>
+				  <li>
+					<div style="background-image:url('https://www.wallpapertip.com/wmimgs/78-788790_cute-kittens-fighting.jpg');">
+					  <dl class="right">
+						<!-- <dt></dt>
+						<dd></dd> -->
+					  </dl>
+					</div>
+				  </li>
+				  <li>
+					<div style="background-image:url('https://www.10wallpaper.com/wallpaper/1366x768/1803/Cute_white_puppy_animal_closeup_1366x768.jpg');">
+					  <dl>
+						<!-- <dt></dt>
+						<dd></dd> -->
+					  </dl>
+					</div>
+				  </li>
+				  <li>
+					<div style="background-image:url('https://image-notepet.akamaized.net/resize/620x-/seimage/20190906%2F7689c563cb6c072aa1d1083332fc90d9.png');">
+					  <dl class="right">
+						<!-- <dt></dt>
+						<dd></dd> -->
+					  </dl>
+					</div>
+				  </li>
+				  <li>
+					<div style="background-image:url('https://post-phinf.pstatic.net/MjAxOTEwMDFfMjQ3/MDAxNTY5ODk3NTQ0MzU4.kkH7dW-CMtD_nEcPxYVaVuhczkOQRc-VsbSrElYi0bYg.-17lHwdn6kYJpfn7TR10tirO7k5WNu7lLjI3m9p9SeEg.JPEG/20140225_175735_90_wa06.jpg?type=w1200');">
+					  <dl>
+						<!-- <dt></dt>
+						<dd></dd> -->
+					  </dl>
+					</div>
+				  </li>
+				</ul>
+				<!-- <div class="btn">
+				  <button type="button" id="prev"><</button>
+				  <button type="button" id="next">></button>
+				</div> -->
+			  </section>
+		 </div>
+		 
+		   
+    </div>
+      <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats and Dogs</title>
+    <link rel="stylesheet" href="style2.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Yusei+Magic&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    
+    <style type="text/css">
+
+
+
+        ul.tabs {
+            margin: 0;
+            padding: 0 0 0 320px;
+            float: left;
+            list-style: none;
+            height: 32px;
+            /* border-bottom: 1px solid #999;
+            border-left: 1px solid #999; */
+            width: 100%;
+        }
+        ul.tabs li {
+            
+            float: left;
+            margin: 0;
+            padding: 0;
+            height: 31px;
+            line-height: 31px;
+            /* border: 1px solid #999; */
+            border-left: none;
+            margin-bottom: -1px;
+            background: #F0F0F0;
+            overflow: hidden;
+            position: relative;
+        }
+        ul.tabs li a {
+            text-decoration: none;
+            color: #000;
+            display: block;
+            font-size: 1.2em;
+            padding: 0 20px;
+            /* border: 1px solid #fff; */
+            outline: none;
+        }
+        ul.tabs li a:hover {
+            /* background: #ccc; */
+        }	
+        html ul.tabs li.active, html ul.tabs li.active a:hover  {
+            background: #fff;
+            border-bottom: 1px solid #fff;
+        }
+        .tab_container {
+            /* border: 1px solid #999; */
+            border-top: none;
+            clear: both;
+            float: left; 
+            width: 100%;
+            /* background: #fff; */
+            -moz-border-radius-bottomright: 5px;
+            -khtml-border-radius-bottomright: 5px;
+            -webkit-border-bottom-right-radius: 5px;
+            -moz-border-radius-bottomleft: 5px;
+            -khtml-border-radius-bottomleft: 5px;
+            -webkit-border-bottom-left-radius: 5px;
+        }
+        .tab_content {
+            padding: 20px;
+            font-size: 1.2em;
+        }
+        .tab_content h2 {
+            font-weight: normal;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #ddd;
+            font-size: 1.8em;
+            padding-top: 50px;
+            padding-bottom: 20px;
+            padding-left: 30px;
+            font-size: 20px;
+            line-height: 1.325em;
+            font-weight: 700;
+            /* text-shadow: 0.05em 0.075em 0 rgb(0 0 0 / 10%); */
+            letter-spacing: 13px;
+            text-transform: uppercase;
+            text-decoration: none;
+
+        }
+        .tab_content h3 a{
+            color: #254588;
+        }
+        .tab_content img {
+            float: left;
+            margin: 0 20px 20px 0;
+            border: 1px solid #ddd;
+            padding: 5px;
+        }
+        </style>
+</head>
+<body>
+    <div id="slide_bg"></div>
+     <div id="slide_menu">
+            <ul class="m_nav">
+               <a href="#" id="close_btn"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z"/></svg></a>
+                <li class="m_nav_title" id="m1"><a href="#">냥정보</a>
+                    <ul class="m_nav_sub">
+                        <li><a href="냥건강.html">건강</a></li>
+                        <li><a href="냥심리.html">심리</a></li>
+                        <li><a href="냥교육.html">교육방법</a></li>
+                    </ul>
+                </li>
+                <li class="m_nav_title" id="m2"><a href="#">멍정보</a>
+                     <ul class="m_nav_sub">
+                        <li><a href="멍건강.html">건강</a></li>
+                        <li><a href="멍심리.html">심리</a></li>
+                        <li><a href="멍교육.html">교육방법</a></li>
+                    </ul>
+                </li>
+                <!-- <li class="m_nav_title" id="m3"><a href="#">Tip</a>
+                     <ul class="m_nav_sub">
+                        <li><a href="#">Sub3-1</a></li>
+                        <li><a href="#">Sub3-2</a></li>
+                        <li><a href="#">Sub3-3</a></li>
+                        <li><a href="#">Sub3-4</a></li>
+                    </ul>
+                </li> -->
+                <li class="m_nav_title" id="m4"><a href="main.html">Home</a>
+                     <!-- <ul class="m_nav_sub">
+                        <li><a href="#">Sub4-1</a></li>
+                        <li><a href="#">Sub4-2</a></li>
+                        <li><a href="#">Sub4-3</a></li>
+                        <li><a href="#">Sub4-4</a></li>
+                    </ul> -->
+                </li>
+            </ul>
+     </div>
+    <div id="wrap">
+       
+        <header id="header">
+            <ul class="nav_mian">
+                <li class="nav_title"><a href="#">냥정보</a>
+                    <ul class="nav_sub">
+                        <li><a href="냥건강.html">건강</a></li>
+                        <li><a href="냥심리.html">심리</a></li>
+                        <li><a href="냥교육.html">교육방법</a></li>
+                    </ul>
+                </li>
+                <li class="nav_title"><a href="#">멍정보</a>
+                     <ul class="nav_sub">
+                        <li><a href="멍건강.html">건강</a></li>
+                        <li><a href="멍심리.html">심리</a></li>
+                        <li><a href="멍교육.html">교육방법</a></li>
+                    </ul>
+                </li>
+                <!-- <li class="nav_title"><a href="#">Tip</a>
+                     <ul class="nav_sub">
+                        <li><a href="#">사료 구입</a></li>
+                        <li><a href="#">미용</a></li>
+                        <li><a href="#">Sub3-3</a></li>
+                        <li><a href="#">Sub3-4</a></li>
+                    </ul>
+                </li> -->
+                <li class="nav_title"><a href="main.html">Home</a>
+                     <!-- <ul class="nav_sub">
+                        <li><a href="#">Sub4-1</a></li>
+                        <li><a href="#">Sub4-2</a></li>
+                        <li><a href="#">Sub4-3</a></li>
+                        <li><a href="#">Sub4-4</a></li>
+                    </ul> -->
+                </li>
+            </ul>
+            <a id="title" href="main.html">Cats and Dogs</a>
+            <div id="burgerbtn"><img style="wdith: 100%; height: 100%;" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yNCAxOHYxaC0yNHYtMWgyNHptMC02djFoLTI0di0xaDI0em0wLTZ2MWgtMjR2LTFoMjR6IiBmaWxsPSIjMTA0MGUyIi8+PHBhdGggZD0iTTI0IDE5aC0yNHYtMWgyNHYxem0wLTZoLTI0di0xaDI0djF6bTAtNmgtMjR2LTFoMjR2MXoiLz48L3N2Zz4="></div>
+        </header>
+
+        <div id="content">
+            
+            <div class="container">
+
+
+                <ul class="tabs">
+                    <li><a href="#tab1">건강상식</a></li>
+                    <li><a href="#tab2">먹이선택</a></li>
+                    <li><a href="#tab3">예방접종</a></li>
+                    <!-- <li><a href="#tab4">Heading 4</a></li>
+                    <li><a href="#tab5">Heading 5</a></li> -->
+            
+                </ul>
+                <div class="tab_container">
+                    <div id="tab1" class="tab_content">
+                        <h2>섭취 열량 조절하기 </h2>
+                        <img src="https://www.nias.go.kr/new_companion/img/sub/03/02_img01.png" class="left">
+                        <p>건강관리의 기본은 사료량을 조절하는 방법입니다.<br>
+                            중성화를 하였다면 체중 조절을 위한 다이어트 사료를 바꾸어 주면 체중관리에 도움을 줄 수 있습니다.<br>
+                            고단백, 저탄수화물, 저지방의 사료를 섭취하게 되면 건강을 해치지 않고 체형을 조절할 수 있게 됩니다. </p><br>
+                        <h2> 간식 조절하기 </h2>
+                        <img src="https://www.nias.go.kr/new_companion/img/sub/03/02_img02.png" class="left">
+                        <p>간식은 적은 양일지라도 칼로리가 높습니다.<br>
+                            간식을 끊기 힘들다면 서서히 줄여가는 것이 좋습니다.<br>
+                            고양이가 먹이로 인한 스트레스가 생길 때에는 장난감으로 놀아주고,<br>
+                            활동량을 늘려주는 것이 효과적입니다. </p>
+                        <h2> 운동량 늘리기 </h2>
+                        <img src="https://www.nias.go.kr/new_companion/img/sub/03/02_img03.png" class="left">
+                        <p>먹는 양에 비해 운동량을 늘리게 되면 살이 빠지는 건 당연하겠죠.<br>
+                            하지만 강아지와 다르게 고양이는 산책을 할 수 없기 때문에 실내에서<br>
+                            장난감으로 많이 놀아주고, 캣 타워를 이용하여 운동을 시켜주는 것이 좋습니다.</p><br>
+                        <h2> 수의사 상담 </h2>
+                        <img src="https://www.nias.go.kr/new_companion/img/sub/03/02_img04.png" class="left">
+                        <p>반려묘의 건강진단부터 비만의 원인, 식단 조절까지 도움을 줄 수 있기 때문에<br>
+                            수의사 상담을 먼저 받는 것이 좋습니다. 반려묘의 건강상태를 확인 후,<br>
+                            무리한 식단조절이 아닌 적절한 영양공급과 운동으로 건강관리에 성공할 수 있습니다.</p>
+                    </div>
+                    <div id="tab2" class="tab_content">
+                        <div class="nm03_tab02div">
+                            <h2 class="subtit">올바른 먹이 선택 가이드</h2>
+                            <div class="nm03_tab02ul1">
+                                <dl>
+                                    <dt><span>건식/습식</span></dt>
+                                    <dd>건식사료는 모든 재료를 혼합한 후 수분이 없는 알갱이 형태로 보관이 쉽고, 고양이의 치아 발달에 도움이 됩니다.
+        습식사료는 익힌 고기나 생선 조각이 들어있는 형태로, 대부분의 고양이는 물을 잘 먹지 않기 때문에 습식사료를 먹이는 것도 좋습니다. 하지만 치석이 생기기 쉽고 변이 물러질 수 있으니 주의가 필요한 사료입니다.</dd>
+                                </dl>
+                                <dl>
+                                    <dt><span>성장별 선택</span></dt>
+                                    <dd>자묘, 성묘, 노령묘용으로 나뉘는 사료가 많이 있으니, 반려묘에 맞는 적정한 사료의 선택이 중요합니다.
+        자묘용 사료는 영양이 성묘 사료보다 많고 열량도 높으며, 2~12개월의 고양이에게 먹이는 것이 좋습니다.
+        성묘용 사료는 12개월 이상의 고양이에게 먹이는 사료로 교체를 해주어야 하고, 노령묘용 사료는 생후 7년 이상 된 고양이가 섭취하는 사료로 교체해주어야 합니다.</dd>
+                                    </dl>
+                                <dl>
+                                    <dt><span>기호성</span></dt>
+                                    <dd>반려묘 각자의 기호가 다르기 때문에 여러 가지 사료를 섭취시켜 본 후 잘 먹는 사료로 선택하는 것이 중요합니다.</dd>
+                                    </dl>
+                                <dl>
+                                    <dt><span>흡수율</span></dt>
+                                    <dd>사료의 성분함량이나 질보다 더욱 중요한 것이 바로 흡수율입니다. 무기질, 탄수화물 등의 기타 영양소가 많이 포함되며, 아무리 좋은 사료를 섭취하더라도 흡수율이 떨어진다면 영양불균형이 오게 됩니다.</dd>
+                                </dl>		
+                                <dl>
+                                    <dt><span>원료의 안정성</span></dt>
+                                    <dd>산업의 발전과 더불어 많은 종류의 프리미엄 사료들이 생산되고 있습니다.
+        원료의 질에 대한 문제로 시중 제품 구매 시 원료에 대한 정보를 알아보는 것도 중요합니다.</dd>
+                                </dl>	
+                            </div>
+                            </div>
+                        </div>
+                    <div id="tab3" class="tab_content">
+                        <div class="nm03_tab02div">
+                            <h2 class="subtit">예방접종 시기</h2>
+                            <div class="nm03_tab02ul1 nm03_tab02ul2bg">
+                                <dl>
+                                    <dt><span>1차 (9주)</span></dt>
+                                    <dd>종합백신</dd>
+                                </dl>								
+                                <dl>
+                                    <dt><span>2차 (12주)</span></dt>
+                                    <dd>종합백신 예방접종</dd>
+                                </dl>								
+                                <dl>
+                                    <dt><span>3차 (15주)</span></dt>
+                                    <dd>종합백신 + 광묘병 예방접종</dd>
+                                </dl>								
+                                <dl>								
+                                    <dt><span>추가접종(1년마다)</span></dt>
+                                    <dd>종합백신 + 광묘병 예방접종
+                                </dd></dl>								
+                            </div>
+                            <h2 class="subtit">예방접종 종류</h2>
+                            <div class="nm03_tab02ul1">
+                                <dl>
+                                    <dt><span>종합 백신</span></dt>
+                                    <dd>종합백신은 1차(생후 9주), 2차(생후 12주), 3차 (생후 15주), 3주 간격으로 3차까지 접종 후, 매년 1회씩 추가로 접종을 합니다.
+        범백혈구 감소증, 전염성 비 기관지염, 클라미디아, 칼라시 바이러스를 에방합니다.</dd>
+                                </dl>								
+                                <dl>								
+                                    <dt><span>광묘병 예방접종</span></dt>
+                                    <dd>광묘병 예방접종은 16-18주에 1회 접종 후, 6개월에서 1년 사이로 한 번씩 추가접종을 해야 합니다.</dd>
+                                </dl>								
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- <div id="tab4" class="tab_content">
+                        <h2>Heading 4</h2>
+                       
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                    <div id="tab5" class="tab_content">
+                        <h2>Heading 5</h2>
+                       
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                </div>
+            </div> -->
+            
+            
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+            <script type="text/javascript">
+            
+            $(document).ready(function() {
+            
+                
+                $(".tab_content").hide(); 
+                $("ul.tabs li:first").addClass("active").show(); 
+                $(".tab_content:first").show(); 
+                
+                
+                $("ul.tabs li").click(function() {
+                    $("ul.tabs li").removeClass("active"); 
+                    $(this).addClass("active"); 
+                    $(".tab_content").hide(); 
+                    var activeTab = $(this).find("a").attr("href"); 
+                    $(activeTab).fadeIn(); 
+                    return false;
+                });
+            
+            });
+            </script>
+            
+      <script src="script.js"></script>
+</body>
+</html>

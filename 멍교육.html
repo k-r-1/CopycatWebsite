@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats and Dogs</title>
+    <link rel="stylesheet" href="style2.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Yusei+Magic&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    $(".hover").mouseleave(
+    function () {
+      $(this).removeClass("hover");
+    }
+  );
+</script>
+    
+    <style type="text/css">
+        ul.tabs {
+            margin: 0;
+            padding: 0 0 0 320px;
+            float: left;
+            list-style: none;
+            height: 32px;
+            /* border-bottom: 1px solid #999;
+            border-left: 1px solid #999; */
+            width: 100%;
+        }
+        ul.tabs li {
+            
+            float: left;
+            margin: 0;
+            padding: 0;
+            height: 31px;
+            line-height: 31px;
+            /* border: 1px solid #999; */
+            border-left: none;
+            margin-bottom: -1px;
+            background: #F0F0F0;
+            overflow: hidden;
+            position: relative;
+        }
+        ul.tabs li a {
+            text-decoration: none;
+            color: #000;
+            display: block;
+            font-size: 1.2em;
+            padding: 0 20px;
+            /* border: 1px solid #fff; */
+            outline: none;
+        }
+        ul.tabs li a:hover {
+            /* background: #ccc; */
+        }	
+        html ul.tabs li.active, html ul.tabs li.active a:hover  {
+            background: #fff;
+            border-bottom: 1px solid #fff;
+        }
+        .tab_container {
+            /* border: 1px solid #999; */
+            border-top: none;
+            clear: both;
+            float: left; 
+            width: 100%;
+            /* background: #fff; */
+            -moz-border-radius-bottomright: 5px;
+            -khtml-border-radius-bottomright: 5px;
+            -webkit-border-bottom-right-radius: 5px;
+            -moz-border-radius-bottomleft: 5px;
+            -khtml-border-radius-bottomleft: 5px;
+            -webkit-border-bottom-left-radius: 5px;
+        }
+        .tab_content {
+            padding: 20px;
+            font-size: 1.2em;
+        }
+        .tab_content h2 {
+            font-weight: normal;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #ddd;
+            font-size: 1.8em;
+            padding-top: 50px;
+            padding-bottom: 20px;
+            padding-left: 30px;
+            font-size: 20px;
+            line-height: 1.325em;
+            font-weight: 700;
+            /* text-shadow: 0.05em 0.075em 0 rgb(0 0 0 / 10%); */
+            letter-spacing: 13px;
+            text-transform: uppercase;
+            text-decoration: none;
+
+        }
+        .tab_content h3 a{
+            color: #254588;
+        }
+        .tab_content img {
+            float: left;
+            margin: 0 20px 20px 0;
+            border: 1px solid #ddd;
+            padding: 5px;
+        }
+
+        @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+        figure.snip1200 {
+        font-family: 'Raleway', Arial, sans-serif;
+        position: relative;
+        overflow: hidden;
+        min-width: 220px;
+        /* max-width: 310px; */
+        max-height: 310px;
+        width: 100%;
+        background: #000000;
+        color: #ffffff;
+        text-align: center;
+        /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.15); */
+        font-size: 16px;
+        }
+        figure.snip1200 * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all 0.45s ease-in-out;
+        transition: all 0.45s ease-in-out;
+        }
+        figure.snip1200 img {
+        max-width: 100%;
+        position: relative;
+        opacity: 0.9;
+        }
+        figure.snip1200 figcaption {
+        position: absolute;
+        top: 45%;
+        left: 7%;
+        right: 7%;
+        bottom: 45%;
+        border: 1px solid white;
+        border-width: 1px 1px 0;
+        }
+        figure.snip1200 .heading {
+        overflow: hidden;
+        -webkit-transform: translateY(50%);
+        transform: translateY(50%);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        }
+        figure.snip1200 h2 {
+        display: table;
+        margin: 0 auto;
+        padding: 0 10px;
+        position: relative;
+        text-align: center;
+        width: auto;
+        text-transform: uppercase;
+        font-weight: 400;
+        }
+        figure.snip1200 h2 span {
+        font-weight: 800;
+        }
+        figure.snip1200 h2:before,
+        figure.snip1200 h2:after {
+        position: absolute;
+        display: block;
+        width: 1000%;
+        height: 1px;
+        content: '';
+        background: white;
+        top: 50%;
+        }
+        figure.snip1200 h2:before {
+        left: -1000%;
+        }
+        figure.snip1200 h2:after {
+        right: -1000%;
+        }
+        figure.snip1200 p {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        position: absolute;
+        width: 100%;
+        padding: 0 20px;
+        margin: 0;
+        opacity: 0;
+        line-height: 1.6em;
+        font-size: 0.9em;
+        }
+        figure.snip1200 a {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        z-index: 1;
+        }
+        figure.snip1200:hover img,
+        figure.snip1200.hover img {
+        opacity: 0.25;
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        }
+        figure.snip1200:hover figcaption,
+        figure.snip1200.hover figcaption {
+        top: 7%;
+        bottom: 7%;
+        }
+        figure.snip1200:hover p,
+        figure.snip1200.hover p {
+        opacity: 1;
+        -webkit-transition-delay: 0.35s;
+        transition-delay: 0.35s;
+        }
+
+        /* 포스트잇 */
+        div.rgyPostIt {
+            position: relative;
+            display: inline-block;
+            padding: 20px 45px 20px 15px;
+            margin: 30px 0;
+            border: 1px solid #f8f861;
+            border-left: 30px solid #f8f861;
+            border-bottom-right-radius: 60px 10px;
+            font-family: 'Nanum Pen Script';
+            font-size: 27px;
+            color: #555;
+            word-break: break-all;
+            background: #ffff88; /* Old browsers */
+            background: -moz-linear-gradient(-45deg, #ffff88 81%, #ffff88 82%, #ffff88 82%, #ffffc6 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, right bottom, color-stop(81%, #ffff88), color-stop(82%, #ffff88), color-stop(82%, #ffff88), color-stop(100%, #ffffc6)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(-45deg, #ffff88 81%, #ffff88 82%, #ffff88 82%, #ffffc6 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(-45deg, #ffff88 81%, #ffff88 82%, #ffff88 82%, #ffffc6 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(-45deg, #ffff88 81%, #ffff88 82%, #ffff88 82%, #ffffc6 100%); /* IE10+ */
+            background: linear-gradient(135deg, #ffff88 81%, #ffff88 82%, #ffff88 82%, #ffffc6 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff88', endColorstr='#ffffc6', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+            transition: all 0.2s;
+            -webkit-transition: all 0.2s;
+        }
+
+        div.rgyPostIt::after {
+            content: " ";
+            position: absolute;
+            z-index: -1;
+            right: 0;
+            bottom: 35px;
+            width: 150px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0);
+            box-shadow: 2px 35px 5px rgba(0, 0, 0, 0.4);
+            -webkit-box-shadow: 2px 35px 5px rgba(0, 0, 0, 0.4);
+            transform: matrix(-1, -0.1, 0, 1, 0, 0);
+            -webkit-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+            -moz-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+            -ms-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+            -o-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+            transition: all 0.2s;
+            -webkit-transition: all 0.2s;
+        }
+
+        div.rgyPostIt:hover {
+            border-bottom-right-radius: 75px 30px;
+        }
+
+        div.rgyPostIt:hover::after {
+            box-shadow: 2px 37px 7px rgba(0, 0, 0, 0.37);
+            -webkit-box-shadow: 2px 37px 7px rgba(0, 0, 0, 0.37);
+        }
+
+        div.rgyPostIt > p {
+            padding: 5px 0 !important;
+        }
+
+        div.rgyPostIt > p::before {
+            content:"\f198";
+            margin-right: 7px;
+            font-family: "FontAwesome";
+            font-weight: normal;
+            font-size: 20px;
+            vertical-align: middle;
+        }
+
+        div.rgyPostIt > p > a {
+            color: #555;
+        }
+        /* 포스트잇 끝 */
+        </style>
+        
+</head>
+<body>
+    <div id="slide_bg"></div>
+     <div id="slide_menu">
+            <ul class="m_nav">
+               <a href="#" id="close_btn"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z"/></svg></a>
+                <li class="m_nav_title" id="m1"><a href="#">냥정보</a>
+                    <ul class="m_nav_sub">
+                        <li><a href="냥건강.html">건강</a></li>
+                        <li><a href="냥심리.html">심리</a></li>
+                        <li><a href="냥교육.html">교육방법</a></li>
+                    </ul>
+                </li>
+                <li class="m_nav_title" id="m2"><a href="#">멍정보</a>
+                     <ul class="m_nav_sub">
+                        <li><a href="멍건강.html">건강</a></li>
+                        <li><a href="멍심리.html">심리</a></li>
+                        <li><a href="멍교육.html">교육방법</a></li>
+                    </ul>
+                </li>
+                <!-- <li class="m_nav_title" id="m3"><a href="#">Tip</a>
+                     <ul class="m_nav_sub">
+                        <li><a href="#">Sub3-1</a></li>
+                        <li><a href="#">Sub3-2</a></li>
+                        <li><a href="#">Sub3-3</a></li>
+                        <li><a href="#">Sub3-4</a></li>
+                    </ul>
+                </li> -->
+                <li class="m_nav_title" id="m4"><a href="main.html">Home</a>
+                     <!-- <ul class="m_nav_sub">
+                        <li><a href="#">Sub4-1</a></li>
+                        <li><a href="#">Sub4-2</a></li>
+                        <li><a href="#">Sub4-3</a></li>
+                        <li><a href="#">Sub4-4</a></li>
+                    </ul> -->
+                </li>
+            </ul>
+     </div>
+    <div id="wrap">
+       
+        <header id="header">
+            <ul class="nav_mian">
+                <li class="nav_title"><a href="#">냥정보</a>
+                    <ul class="nav_sub">
+                        <li><a href="냥건강.html">건강</a></li>
+                        <li><a href="냥심리.html">심리</a></li>
+                        <li><a href="냥교육.html">교육방법</a></li>
+                    </ul>
+                </li>
+                <li class="nav_title"><a href="#">멍정보</a>
+                     <ul class="nav_sub">
+                        <li><a href="멍건강.html">건강</a></li>
+                        <li><a href="멍심리.html">심리</a></li>
+                        <li><a href="멍교육.html">교육방법</a></li>
+                    </ul>
+                </li>
+                <!-- <li class="nav_title"><a href="#">Tip</a>
+                     <ul class="nav_sub">
+                        <li><a href="#">사료 구입</a></li>
+                        <li><a href="#">미용</a></li>
+                        <li><a href="#">Sub3-3</a></li>
+                        <li><a href="#">Sub3-4</a></li>
+                    </ul>
+                </li> -->
+                <li class="nav_title"><a href="main.html">Home</a>
+                     <!-- <ul class="nav_sub">
+                        <li><a href="#">Sub4-1</a></li>
+                        <li><a href="#">Sub4-2</a></li>
+                        <li><a href="#">Sub4-3</a></li>
+                        <li><a href="#">Sub4-4</a></li>
+                    </ul> -->
+                </li>
+            </ul>
+            <a id="title" href="main.html">Cats and Dogs</a>
+            <div id="burgerbtn"><img style="wdith: 100%; height: 100%;" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yNCAxOHYxaC0yNHYtMWgyNHptMC02djFoLTI0di0xaDI0em0wLTZ2MWgtMjR2LTFoMjR6IiBmaWxsPSIjMTA0MGUyIi8+PHBhdGggZD0iTTI0IDE5aC0yNHYtMWgyNHYxem0wLTZoLTI0di0xaDI0djF6bTAtNmgtMjR2LTFoMjR2MXoiLz48L3N2Zz4="></div>
+        </header>
+
+        <div id="content">
+
+            <div class="rgyPostIt">반려견은 보호자와의 유대감 형성과 사회화 학습을 통해 인간사회에 보다 안정적으로 적응할 수 있습니다. 보호자는 반려견의 학습을 위해 심리상태와 의사표현 방식을 올바르게 이해하여 반려견에게 적절한 도움을 줄 수 있어야 합니다.</div>
+
+            <figure class="snip1200">
+                <img src="http://www.v3wall.com/wallpaper/1920_1080/1004/1920_1080_20100408125750183701.jpg" alt="sq-sample27" />
+                <figcaption>
+                  <p>반려견의 사회화란 감각기관이 발달하는 생후 2주부터 주변 환경에 대해 배우고 살면서 필요한 경험과 대처법을 터득하는 과정을 말한다. 특히 생후 3주~14주는 일상의 자극에 대한 반응의 형태을 형성하는 중요한 역할을 하기 때문에 사회화 훈련 이 꼭 필요한 시기이다.<br><br>
+                    ① 입양 시 모견 및 형제견과 충분한 시간을 보낼 수 있도록 입양시기를 결정한다.<br>
+                    ② 어린 강아지를 입양한 보호자는 빠른 시일에 다양한 자극에 대한 사회화교육 계획을 수립해야 한다.<br>
+                    ③ 사회화 교육은 보상을 활용 하는 등 긍정적인 방법과 상황에서 수행해야 한다.</p>
+                  <div class="heading">
+                    <h2>반려견의 <span>사회화</span></h2>
+                  </div>
+                </figcaption>
+              </figure>
+              <figure class="snip1200">
+                <img src="https://10wallpaper.com/wallpaper/1366x768/1106/Lovable_Puppy_in_Garden_Wallpaper-Lovely_Puppies_1366x768.jpg" alt="sq-sample27" />
+                <figcaption>
+                  <p>반려견은 반복과 보상을 통해 규칙을 습득 할 수 있다. 특히 기다리기 규칙은 반려견을 보다 차분하고 안전하게 행동하도록 도와준다. 기다리기 규칙은<br>
+                    <br> 1. 산책 전 현관문 앞에서,<br>
+                    2.엘리베이터 탑승 시,<br>
+                    3.건널목에서 적용하면 좋다.<br>
+                    ① 반려견과 만들 규칙을 정한다.<br>
+                    ② 반려견이 규칙과 관련된 행동 시 보상한다.<br>
+                    ③ 반복적인 상황연출과 규칙 행동에 대한 보상을 통해 규칙을 강화한다.</p>
+                  <div class="heading">
+                    <h2>반려견과 <span>규칙 만들기</span></h2>
+                  </div>
+                </figcaption>
+              </figure>
+              <figure class="snip1200">
+                <img src="http://www.v3wall.com/wallpaper/1920_1080/0912/1920_1080_20091216124346392996.jpg" alt="sq-sample27" />
+                <figcaption>
+                  <p>공공장소에서는 반려견 보호자의 예절(펫티켓)이 더욱 요구된다.<br>
+                    ① 반려견의 배설물 직접 수거 하기<br>
+                    - 대변 수거를 위한 용품(봉투, 휴지, 비닐장갑 등)챙기기<br>
+                    ② 상황에 따라 적정 길이로 리드줄(목줄)을 조정하여 반려견 보호·관리하기<br>
+                    - 짧게 조정 : 주위에 사람·동물 또는 차량 통행이 많을 때, 좁은 공간에서 등<br>
+                    - 길게 조정 : 반려견의 안전한 활동이 보장된 장소</p>
+                  <div class="heading">
+                    <h2>반려인이 지켜야 할 <span>예절</span></h2>
+                  </div>
+                </figcaption>
+              </figure>
+              </div>
+            
+      <script src="script.js"></script>
+</body>
+</html>
