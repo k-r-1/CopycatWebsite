@@ -12,7 +12,7 @@
 - 창이 작아지면, 오른쪽에 메뉴가 나타나게끔 구현
 - 메뉴 클릭시 해당 메뉴와 관련된 내용으로 전환되게끔 구현
 - 클릭 시 내용이 펼쳐지게끔 구현
-- 마우스를 올렸을 때 내용이 펼쳐지게끔 구현
+- 마우스를 올렸을 때 내용이 펼쳐지게끔 구현<br></br>
 
 ![Animation](https://user-images.githubusercontent.com/83098949/211803764-30e54454-7e72-408d-add4-fe81fbd80435.gif)
 ![Animation2](https://user-images.githubusercontent.com/83098949/211804622-07f1b6f2-2f8b-4bc8-9639-0507e6a68c2f.gif)
