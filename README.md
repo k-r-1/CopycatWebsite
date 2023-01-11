@@ -15,7 +15,7 @@
 - 마우스를 올렸을 때 내용이 펼쳐지게끔 구현<br></br>
 
 ![Animation](https://user-images.githubusercontent.com/83098949/211803764-30e54454-7e72-408d-add4-fe81fbd80435.gif)
-![Animation2](https://user-images.githubusercontent.com/83098949/211804622-07f1b6f2-2f8b-4bc8-9639-0507e6a68c2f.gif)
+![Animation2](https://user-images.githubusercontent.com/83098949/211809207-48b67ceb-9295-42c8-b22c-e5a4113dc642.gif)
 ![Animation3](https://user-images.githubusercontent.com/83098949/211805233-66429cfb-b1da-4fbf-b4b7-1a4caf438ac6.gif)
 ![Animation4](https://user-images.githubusercontent.com/83098949/211806219-e20dee53-22d6-4e6e-bf28-207cfc1737ad.gif)
 ![Animation5](https://user-images.githubusercontent.com/83098949/211806926-347cd96f-7fc7-48bc-86cf-2b364e03438d.gif)<br></br>
