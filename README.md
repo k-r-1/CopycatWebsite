@@ -18,7 +18,7 @@
 ![Animation2](https://user-images.githubusercontent.com/83098949/211809207-48b67ceb-9295-42c8-b22c-e5a4113dc642.gif)
 ![Animation3](https://user-images.githubusercontent.com/83098949/211805233-66429cfb-b1da-4fbf-b4b7-1a4caf438ac6.gif)
 ![Animation4](https://user-images.githubusercontent.com/83098949/211806219-e20dee53-22d6-4e6e-bf28-207cfc1737ad.gif)
-![Animation5](https://user-images.githubusercontent.com/83098949/211806926-347cd96f-7fc7-48bc-86cf-2b364e03438d.gif)<br></br>
+![Animation5](https://user-images.githubusercontent.com/83098949/211806926-347cd96f-7fc7-48bc-86cf-2b364e03438d.gif) <br></br>
 
 ## 프로젝트 목적
 - HTML, CSS, JavaScript를 학습한 후 이를 실제 프로젝트에 적용하여 실전 경험을 쌓고자 하였습니다.
@@ -27,5 +27,5 @@
 ## 프로젝트 회고 
 - 웹 개발에 대한 기초적인 지식만으로 프로젝트를 진행하다 보니, 구글링에 의존하는 빈도가 많아졌고 결과물의 완성도에 아쉬움이 남았습니다.
 - 하지만 이번 프로젝트를 통해 구글링을 통한 문제 해결 능력이 향상되었고, 학습한 내용을 직접 구현하면서 웹 개발 과정에 대한 이해를 넓히는 의미 있는 경험이 되었습니다.
-- 향후에는 JavaScript와 같은 동적 기능에 대한 심화 학습을 통해, 보다 완성도 높은 웹사이트를 개발하고자 합니다. <br><br>
+- 향후에는 JavaScript와 같은 동적 기능에 대한 심화 학습을 통해, 보다 완성도 높은 웹사이트를 개발하고자 합니다.
   
